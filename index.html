@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Maze Game</title>
+<style>body{margin:0;background:#111;display:flex;justify-content:center;align-items:center;height:100vh;font-family:monospace;}canvas{border:2px solid #333;}</style>
+</head>
+<body><canvas id=c width=400 height=400></canvas>
+<script>
+const canvas=document.getElementById('c');
+const ctx=canvas.getContext('2d');
+ctx.fillStyle='#111';ctx.fillRect(0,0,400,400);
+ctx.fillStyle='#fff';ctx.font='20px monospace';ctx.fillText('Maze Game',150,200);
+ctx.fillText('WIP — in progress',130,230);
+</script>
+</body>
+</html>
