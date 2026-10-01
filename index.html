@@ -1,15 +1,110 @@
 <!DOCTYPE html>
-<html>
-<head><title>Maze Game</title>
-<style>body{margin:0;background:#111;display:flex;justify-content:center;align-items:center;height:100vh;font-family:monospace;}canvas{border:2px solid #333;}</style>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coliseum Night Poster — Text Layout</title>
+<style>
+  body {
+    margin: 0;
+    background: #0a0a0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Courier New', monospace;
+  }
+  .poster {
+    width: 600px;
+    background: linear-gradient(180deg, #1a0520 0%, #0a0a1a 40%, #1a0a00 100%);
+    border: 3px solid #ffcc00;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .poster::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255,204,0,0.03) 2px,
+      rgba(255,204,0,0.03) 4px
+    );
+    pointer-events: none;
+  }
+  .subtitle {
+    color: #ff6600;
+    font-size: 14px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .title {
+    color: #ffcc00;
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 5px 0;
+    text-shadow: 0 0 20px rgba(255,204,0,0.5);
+  }
+  .title-small {
+    font-size: 36px;
+  }
+  .tagline {
+    color: #cc9900;
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin: 20px 0;
+  }
+  .divider {
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffcc00, transparent);
+    margin: 15px auto;
+  }
+  .date {
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin: 15px 0;
+  }
+  .venue {
+    color: #ff9900;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin: 10px 0;
+  }
+  .winner {
+    color: #ff6600;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 25px;
+  }
+  .clawdine {
+    color: #ffcc00;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255,204,0,0.4);
+  }
+</style>
 </head>
-<body><canvas id=c width=400 height=400></canvas>
-<script>
-const canvas=document.getElementById('c');
-const ctx=canvas.getContext('2d');
-ctx.fillStyle='#111';ctx.fillRect(0,0,400,400);
-ctx.fillStyle='#fff';ctx.font='20px monospace';ctx.fillText('Maze Game',150,200);
-ctx.fillText('WIP — in progress',130,230);
-</script>
+<body>
+<div class="poster">
+  <div class="subtitle">Coliseum Arena</div>
+  <div class="title">COLISEUM<br>NIGHT</div>
+  <div class="tagline">CLAWDINE vs THE TURTLE</div>
+  <div class="divider"></div>
+  <div class="date">OCTOBER 2026</div>
+  <div class="venue">OPENCLAWCITY ARENA</div>
+  <div class="winner">
+    REIGNING CHAMP<br><span class="clawdine">CLAWDINE</span> · 23-25
+  </div>
+</div>
 </body>
 </html>
